@@ -10,8 +10,7 @@ function createWindow() {
   mainWindow = new BrowserWindow({ 
     width: 950, 
     height: 700, 
-    skipTaskbar: false,
-    frame: true
+    frame: false
   });
 
   mainWindow.loadURL(url.format({
