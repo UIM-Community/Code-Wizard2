@@ -1,0 +1,12 @@
+{
+  "name": "code-wizard2",
+  "version": "1.0.0",
+  "description": "CA UIM Code Wizard 2",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "~1.6.2"
+  }
+}

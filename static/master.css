@@ -1,0 +1,94 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+section {
+    margin: 0;
+    padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6,span,b,p {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: none;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/*
+ * Global style CSS
+ */
+body {
+    display: flex;
+    flex-direction: column;
+    background: #37474F;
+    border: 2px solid #263238;
+    box-sizing: border-box;
+    font-family: Roboto,Calibri;
+}
+
+    body > nav {
+        height: 30px;
+        background: #263238;
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+    }   
+        body > nav h1 {
+            font-size: 16px;
+            font-weight: bold;
+            margin-left: 10px;
+            color: #FFF;
+        }
+
+    body > main {
+        flex-grow: 1;
+        display: flex;
+    }
+
+        body > main > section#options {
+            display: flex;
+            width: 250px;
+            flex-shrink: 0;
+            margin: 10px 10px 10px 0;
+            padding: 0 10px;
+            border-right: 2px solid #263238;
+            flex-direction: column;
+        }
+            body > main > section#options h1 {
+                background: #039BE5;
+                padding: 5px;
+                border: 2px solid #263238;
+                border-radius: 2px;
+                font-size: 16px;
+                box-sizing: border-box;
+                margin-bottom: 10px;
+                color: #FFF;
+                font-weight: 400;
+            }
+
+        body > main > section#code {
+            flex-grow: 1;
+            padding: 10px;
+            overflow-y: auto;
+        }
+
+/*
+ * Input CSS
+ */
+ input, select {
+     outline: none;
+ }
