@@ -9,21 +9,31 @@
         <link href="./fonts/Roboto.css" rel="stylesheet">
         <link href="./fonts/Exo.css" rel="stylesheet">
         <script src="./master.js" defer></script>
-        <script src="./lib/highlight.pack.js"></script>
+        <script src="./lib/highlight.pack.js" defer></script>
     </head>
     <body>
         <nav>
-            <h1>Code wizard 2</h1>
+            <h1>CA UIM - Code wizard 2</h1>
+            <ul>
+                <li id="win_maximize">maximize</li>
+                <li id="win_close">close</li>
+            </ul>
         </nav>
         <main>
             <section id="options">
                 <h1>Language</h1>
                 <select name="language" id="language">
-                    <option>Perl</option>
-                    <option>Java</option>
+                    <option value="pl">Perl</option>
+                    <option value="java">Java</option>
+                    <option value="c">C (Static libs)</option>
+                    <option value="lua">NAS (Lua)</option>
                 </select>
-                <hr />
                 <h1>Generator settings</h1>
+                <label>
+                    <input type="checkbox" id="cbox1" value="checkbox1">
+                    Subscribe to message from hub!
+                </label>
+                <button id="generate">Generate code</button>
             </section>
             <section id="code">
                 <pre id="code_block"></pre>
