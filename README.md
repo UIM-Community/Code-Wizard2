@@ -15,3 +15,9 @@ cd Code-Wizard2
 npm install
 npm start 
 ```
+ 
+## Roadmap R1.0
+
+- Add font-awesome
+- Fix highlighting (bad characters). 
+- Work on samples generation for C,Java,Perl and LUA
