@@ -85,6 +85,8 @@ body {
         display: flex;
         align-items: center;
         flex-shrink: 0;
+        -webkit-user-select: none;
+        -webkit-app-region: drag;
     }   
         body > nav h1 {
             font-size: 16px;
@@ -99,14 +101,18 @@ body {
             display: flex;
         }
             body > nav > ul li {
-                height: 25px;
-                background: #FFF;
-                color: #333;
+                height: 20px;
+                color: #FFF;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                min-width: 30px;
+                min-width: 20px;
             }
+                body > nav > ul li:hover {
+                    color: #f92672;
+                    cursor: pointer;
+                }
+                
             body > nav > ul li + li {
                 margin-left: 10px;
             }

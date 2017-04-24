@@ -10,7 +10,7 @@ function createWindow() {
   mainWindow = new BrowserWindow({ 
     width: 950, 
     height: 700, 
-    frame: true
+    frame: false
   });
 
   mainWindow.loadURL(url.format({
@@ -19,7 +19,7 @@ function createWindow() {
     slashes: true
   }));
 
-  mainWindow.webContents.openDevTools()
+  //mainWindow.webContents.openDevTools()
 
   mainWindow.on('closed', function () {
     mainWindow = null;
