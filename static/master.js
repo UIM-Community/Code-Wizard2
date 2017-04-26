@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded',function(e) {
     const window    = remote.getCurrentWindow();
 
     document.getElementById('win_maximize').addEventListener('click', () => {
+        console.log('min clicked');
         if (window.isMaximized() === false) {
             window.maximize();          
         } 
@@ -22,6 +23,7 @@ document.addEventListener('DOMContentLoaded',function(e) {
     });
 
     document.getElementById('win_close').addEventListener('click', () => {
+        console.log('closed clicked!');
         window.close();
     });
 
@@ -49,14 +51,46 @@ document.addEventListener('DOMContentLoaded',function(e) {
     /*
      * Require generic block!
      */
-    const codeBlock     = document.getElementById('code_block');
-    const generateBTN   = document.getElementById('generate');
+    const codeBlock         = document.getElementById('code_block');
+    const generateBTN       = document.getElementById('generate');
+    const copyToClipboard   = document.getElementById('copy');
+
+    function selectText(containerid) {
+        if (document.selection) {
+            var range = document.body.createTextRange();
+            range.moveToElementText(codeBlock);
+            range.select();
+        } 
+        else if (window.getSelection) {
+            var range = document.createRange();
+            range.selectNode(codeBlock);
+            window.getSelection().addRange(range);
+        }
+    }
+
+    if(document.queryCommandSupported('copy') === false) {
+        copyToClipboard.style.display = 'none';
+    }
+    else {
+        copyToClipboard.addEventListener('click',() => {
+            selectText();
+
+            try {
+                var successful = document.execCommand('copy');
+                var msg = successful ? 'successful' : 'unsuccessful';
+                console.log('Copying text command was ' + msg);
+            } catch (err) {
+                console.log('Oops, unable to copy');
+            }
+        });
+    }
 
     /*
      * Add listener
      */
     generateBTN.addEventListener('click', e => {
         const ext = document.getElementById('language').value;
+
         loadSample(ext);
     });
 });

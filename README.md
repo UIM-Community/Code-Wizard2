@@ -18,6 +18,7 @@ npm start
  
 ## Roadmap R1.0
 
-- Add font-awesome
+- Add a manifest file to generate all options and link all of this with sample(s) project path.
+- Work on copy to clipboard option.
 - Fix highlighting (bad characters). 
 - Work on samples generation for C,Java,Perl and LUA
