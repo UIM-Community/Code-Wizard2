@@ -7,7 +7,5 @@
     "start": "electron ."
   },
   "devDependencies": {},
-  "dependencies": {
-    "electron": "^2.0.14"
-  }
+  "dependencies": {}
 }
